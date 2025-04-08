@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Dilemma - Question 6</title>
+    <link rel="stylesheet" href="question6-style.css">
+</head>
+<body>
+    <main class="container">
+        <!-- Left Side: Question Box -->
+        <div class="question-box">
+            <h1>Progress or Preservation?</h1>
+            <p>
+                You are the CEO of a tech company that has developed a revolutionary AI system capable of solving world hunger,  
+                but at the cost of eliminating millions of jobs globally.  
+                <br><br>
+                Would you release the AI, drastically improving global well-being while causing mass unemployment and poverty?  
+                <br>
+                OR
+                <br>
+                Withhold the AI to preserve jobs, knowing it will perpetuate existing suffering and inequality.
+            </p>
+        </div>
+
+        <!-- Right Side: Options -->
+        <div class="options-box">
+            <button class="option-btn" id="no-action">
+                <img src="images/pear.png" alt="Pear Icon" class="icon">
+                Release the AI
+            </button>
+            <button class="option-btn" id="pull-lever">
+                <img src="images/broccoli.png" alt="Broccoli Icon" class="icon">
+                Withhold the AI
+            </button>
+        </div>
+
+        <!-- Results Section (Initially Hidden) -->
+        <div class="results-box" id="results-box" style="display: none;">
+            <p id="outcome-text"></p>
+            <div class="percentage-bar">
+                <div id="percentage-fill">
+                    <span id="percentage-text">0%</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Shop Again Button (Initially Hidden) -->
+        <a href="index.html" class="shop-again-btn" id="shop-again" style="display: none;">Shop Again</a>
+    </main>
+
+    <!-- Script -->
+    <script src="question6-script.js"></script>
+</body>
+</html>

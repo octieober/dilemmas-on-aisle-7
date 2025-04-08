@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Dilemma - Question 2</title>
+    <link rel="stylesheet" href="question2-style.css">
+</head>
+<body>
+    <main class="container">
+        <!-- Left Side: Question Box -->
+        <div class="question-box">
+            <h1>Corporate Dilemma</h1>
+            <p>
+                A trolley is barreling towards five workers who are about to be laid off from their jobs due to corporate downsizing.<br>
+                On another track, there is one worker who has just been promoted and will receive a substantial bonus if he survives.<br><br>
+                Would you divert the trolley, sacrificing one for five who may contribute less to society in the long run?
+            </p>
+        </div>
+
+        <!-- Right Side: Options -->
+        <div class="options-box">
+            <button class="option-btn" id="no-action">
+                <img src="images/pear.png" alt="Pear Icon" class="icon">
+                Do Nothing - Kill Five
+            </button>
+            <button class="option-btn" id="pull-lever">
+                <img src="images/broccoli.png" alt="Broccoli Icon" class="icon">
+                Pull Lever - Sacrifice One
+            </button>
+        </div>
+
+        <!-- Results Section (Initially Hidden) -->
+        <div class="results-box" id="results-box" style="display: none;">
+            <p id="outcome-text"></p>
+            <div class="percentage-bar">
+                <div id="percentage-fill">
+                    <span id="percentage-text">0%</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Shop Again Button (Initially Hidden) -->
+        <a href="index.html" class="shop-again-btn" id="shop-again" style="display: none;">Shop Again</a>
+    </main>
+
+    <!-- Script -->
+    <script src="question2-script.js"></script>
+</body>
+</html>

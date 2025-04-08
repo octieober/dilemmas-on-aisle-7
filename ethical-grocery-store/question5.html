@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Dilemma - Question 5</title>
+    <link rel="stylesheet" href="question5-style.css">
+</head>
+<body>
+    <main class="container">
+        <!-- Left Side: Question Box -->
+        <div class="question-box">
+            <h1>Stay or Go?</h1>
+            <p>
+                Your spouse has been offered their dream job that requires relocating far away,  
+                but it means uprooting your children from their school and friends.  
+                You can support their career ambitions, potentially sacrificing your family's stability,  
+                or oppose the move to maintain your children's current environment, but risk straining your relationship with your spouse.  
+                <br><br>
+                Prioritise your children's comfort and stability, but risk tension with your spouse.  
+                <br>
+                OR
+                <br>
+                Support your spouse's career dreams, but risk uprooting your family's life and stability.
+            </p>
+        </div>
+
+        <!-- Right Side: Options -->
+        <div class="options-box">
+            <button class="option-btn" id="no-action">
+                <img src="images/pear.png" alt="Pear Icon" class="icon">
+                Prioritise Children
+            </button>
+            <button class="option-btn" id="pull-lever">
+                <img src="images/broccoli.png" alt="Broccoli Icon" class="icon">
+                Support Spouse's Career
+            </button>
+        </div>
+
+        <!-- Results Section (Initially Hidden) -->
+        <div class="results-box" id="results-box" style="display: none;">
+            <p id="outcome-text"></p>
+            <div class="percentage-bar">
+                <div id="percentage-fill">
+                    <span id="percentage-text">0%</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Shop Again Button (Initially Hidden) -->
+        <a href="index.html" class="shop-again-btn" id="shop-again" style="display: none;">Shop Again</a>
+    </main>
+
+    <!-- Script -->
+    <script src="question5-script.js"></script>
+</body>
+</html>
