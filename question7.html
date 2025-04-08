@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Dilemma - Question 7</title>
+  <link rel="stylesheet" href="question7-style.css" />
+</head>
+<body>
+  <main class="container">
+    <!-- Left Side: Question Box -->
+    <div class="question-box">
+      <h1>The Other You</h1>
+      <p>
+        You meet someone identical to you — same life, same mind, same start.<br><br>
+        But every moral decision you made, they chose the opposite.<br>
+        They walked away when you stayed.<br>
+        They betrayed someone you protected.<br>
+        They kept secrets you exposed.<br><br>
+        And they’re thriving. They sleep soundly.<br>
+        They say: <i>“I did what was right. You just wanted to feel right.”</i><br><br>
+        Suddenly, everything you built your sense of self on — your sacrifices, your principles — feels fragile.<br><br>
+        You could open your mind, admit your morals are just one version of the truth.  
+        But if you do... what was the point of all your pain?
+      </p>
+    </div>
+
+    <!-- Right Side: Options -->
+    <div class="options-box">
+      <button class="option-btn" id="no-action">
+        <img src="images/pear.png" alt="Pear Icon" class="icon" />
+        Accept You Might Be Wrong
+      </button>
+      <button class="option-btn" id="pull-lever">
+        <img src="images/broccoli.png" alt="Broccoli Icon" class="icon" />
+        Defend Your Morality
+      </button>
+    </div>
+
+    <!-- Results Section (Initially Hidden) -->
+    <div class="results-box" id="results-box" style="display: none;">
+      <p id="outcome-text"></p>
+      <div class="percentage-bar">
+        <div id="percentage-fill">
+          <span id="percentage-text">0%</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Shop Again Button (Initially Hidden) -->
+    <a href="index.html" class="shop-again-btn" id="shop-again" style="display: none;">Shop Again</a>
+  </main>
+
+  <script src="question7-script.js"></script>
+</body>
+</html>

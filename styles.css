@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap');
+
+/* Global Styles */
+body {
+    font-family: 'Anonymous Pro', monospace;
+    text-align: center;
+    background-color: #f8f5f2;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-image: url('grocery-store.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Header Title Box */
+.title-box {
+    display: inline-block;
+    background-color: #2f48cd;
+    padding: 20px 40px;
+    border-radius: 50px;
+    margin-top: 65px;
+}
+
+.title-box h1 {
+    font-family: 'Anonymous Pro', monospace;
+    letter-spacing: 2px;
+    text-transform: none;
+    color: white;
+    font-size: 58px;
+    font-weight: normal;
+    margin: 8px 0 0 0;
+    line-height: 1;
+}
+
+/* Store Section */
+.store {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+/* Trolley Image Buttons */
+.trolley {
+    width: 150px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.trolley:hover {
+    transform: scale(1.1);
+}
+
+/* Custom Positioning for Trolleys */
+.store a:nth-child(1) {
+    transform: scale(1.9) translate(170px, -20px);
+}
+
+.store a:nth-child(2) {
+    transform: scale(2) translate(305px, -10px);
+}
+
+.store a:nth-child(3) {
+    transform: scale(2.8) translate(80px, 20px);
+}
+
+.store a:nth-child(4) {
+    transform: scale(2.8) translate(-110px, 50px);
+}
+
+.store a:nth-child(5) {
+    transform: scale(4) translate(-45px, 85px);
+}
+
+.store a:nth-child(6) {
+    transform: scale(4.5) translate(-168px, 100px);
+}
+
+.store a:nth-child(7) {
+    transform: scale(3.6) translate(-35px, 60px);
+}

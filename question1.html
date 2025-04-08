@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Trolley Dilemma</title>
+    <link rel="stylesheet" href="question1-style.css">
+</head>
+<body>
+    <main class="container">
+        <!-- Left Side: Question Box -->
+        <div class="question-box">
+            <h1>The Trolley Dilemma</h1>
+            <p>
+                There are three tracks on the road:<br>
+                - <b>Track A</b> has 2 people.<br>
+                - <b>Track B</b> has 3 people.<br>
+                - <b>Track C</b> has 1 person.<br><br>
+                In your hand is a lever. If you <b>do not pull the lever</b>, the train will run over <b>Track A</b> and kill 2 people.<br><br>
+                <b>OR</b><br><br>
+                Would you <b>pull the lever</b>, not knowing whether the train will go to <b>Track B (3 people)</b> or <b>Track C (1 person)</b>?
+            </p>
+        </div>
+
+        <!-- Right Side: Options -->
+        <div class="options-box">
+            <button class="option-btn" id="no-action">
+                <img src="images/pear.png" alt="Pear Icon" class="icon">
+                Don't Pull the Lever
+            </button>
+            <button class="option-btn" id="pull-lever">
+                <img src="images/broccoli.png" alt="Broccoli Icon" class="icon">
+                Pull the Lever
+            </button>
+        </div>
+
+        <!-- Results Section (Initially Hidden) -->
+        <div class="results-box" id="results-box" style="display: none;">
+            <p id="outcome-text"></p>
+            <div class="percentage-bar">
+                <div id="percentage-fill">
+                    <span id="percentage-text">0%</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Shop Again Button (Initially Hidden) -->
+        <a href="index.html" class="shop-again-btn" id="shop-again" style="display: none;">Shop Again</a>
+    </main>
+
+    <!-- Correctly Placed Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const noActionBtn = document.getElementById('no-action');
+            const pullLeverBtn = document.getElementById('pull-lever');
+            const resultsBox = document.getElementById('results-box');
+            const outcomeText = document.getElementById('outcome-text');
+            const percentageFill = document.getElementById('percentage-fill');
+            const percentageText = document.getElementById('percentage-text');
+            const shopAgainBtn = document.getElementById('shop-again');
+
+            // Retrieve stored data or initialize if not found
+            let pullCount = parseInt(localStorage.getItem('pullCount')) || 0;
+            let noActionCount = parseInt(localStorage.getItem('noActionCount')) || 0;
+
+            // Utility function to calculate the percentage of pulls
+            function calculatePercentage(pull, noAction) {
+                const total = pull + noAction;
+                if (total === 0) return 0;
+                return Math.round((pull / total) * 100);
+            }
+
+            // Function to update and display the result
+            function showResult(message, percentage) {
+                // Hide buttons
+                noActionBtn.style.display = 'none';
+                pullLeverBtn.style.display = 'none';
+
+                // Show results
+                resultsBox.style.display = 'flex';
+                outcomeText.textContent = message;
+                percentageFill.style.width = percentage + "%";
+                percentageText.textContent = percentage + "%";
+
+                // Show shop again button
+                shopAgainBtn.style.display = 'block';
+            }
+
+            // Handle "No Action" button click
+            noActionBtn.addEventListener('click', () => {
+                noActionCount++; // Increment the count
+                localStorage.setItem('noActionCount', noActionCount); // Save to local storage
+                const percentage = calculatePercentage(pullCount, noActionCount);
+                const message = "You did nothing. The train ran over Track A and killed 2 people.";
+                showResult(message, 100 - percentage); // Show reversed percentage for no action
+            });
+
+            // Handle "Pull Lever" button click
+            pullLeverBtn.addEventListener('click', () => {
+                pullCount++; // Increment the count
+                localStorage.setItem('pullCount', pullCount); // Save to local storage
+                const isTrackB = Math.random() < 0.5;
+                const message = isTrackB 
+                    ? "You pulled the lever. The train switched to Track B and killed 3 people."
+                    : "You pulled the lever. The train switched to Track C and killed 1 person.";
+                const percentage = calculatePercentage(pullCount, noActionCount);
+                showResult(message, percentage); // Show the calculated percentage
+            });
+
+            // Reset counts and go back to the main page
+            shopAgainBtn.addEventListener('click', () => {
+                window.location.href = "index.html";
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+

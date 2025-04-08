@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Dilemma - Question 3</title>
+    <link rel="stylesheet" href="question3-style.css">
+</head>
+<body>
+    <main class="container">
+        <!-- Left Side: Question Box -->
+        <div class="question-box">
+            <h1>A love that Pollutes Dilemma</h1>
+            <p>
+                The love of your life and parent to your 5 children has a severe chronic illness that requires specific medications.  
+                These medications are obtained by mass destruction and pollution to the environment on an unearthly level.<br><br>
+                
+                Would you, as a partner and parent, allow your loved one to continue treatment,  
+                so that they could live a long life with you and your family, in a world full of chaos and pollution?  
+                <br>
+                OR
+                <br>
+                Would you allow your children to live out their lives in a healthy and blissful environment,  
+                without the upbringing of their other parent?
+            </p>
+        </div>
+
+        <!-- Right Side: Options -->
+        <div class="options-box">
+            <button class="option-btn" id="no-action">
+                <img src="images/pear.png" alt="Pear Icon" class="icon">
+                Continue Treatment
+            </button>
+            <button class="option-btn" id="pull-lever">
+                <img src="images/broccoli.png" alt="Broccoli Icon" class="icon">
+                Stop Treatment
+            </button>
+        </div>
+
+        <!-- Results Section (Initially Hidden) -->
+        <div class="results-box" id="results-box" style="display: none;">
+            <p id="outcome-text"></p>
+            <div class="percentage-bar">
+                <div id="percentage-fill">
+                    <span id="percentage-text">0%</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Shop Again Button (Initially Hidden) -->
+        <a href="index.html" class="shop-again-btn" id="shop-again" style="display: none;">Shop Again</a>
+    </main>
+
+    <!-- Script -->
+    <script src="question3-script.js"></script>
+</body>
+</html>
